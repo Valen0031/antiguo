@@ -1,9 +1,23 @@
 # Trabajo-Grupal
 **Variables independientes**
 
-*satis_dem* : Satisfacción de la democracia 
+*satis_dem* : ¿Qué tan satisfecho se encuentra con la democracia en su país?
 
-*creencias* : ¿Cuál de las frases está mas cerca de su manera de pensar 
+Very satisfied 
+
+Quite satisfied 
+
+Not very satisfied 
+
+Not at all satisfied 
+
+*creencias* : ¿Cuál de las frases está mas cerca de su manera de pensar? 
+
+Democracy is preferable to any other kind of government 
+
+Under some circumstances, an authoritarian government can be preferable to a democratic one 
+
+For people like me, it doesn’t matter whether we have a democratic or non-democratic regime 
 
 **Variables de control**
 
