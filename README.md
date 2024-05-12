@@ -1,1 +1,2 @@
 # trabajo-grupal
+Variables independientes
