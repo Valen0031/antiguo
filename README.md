@@ -1,16 +1,16 @@
 # trabajo-grupal
-Variables independientes
+**Variables independientes**
 
-satis_dem : Satisfacción de la democracia 
+*satis_dem* : Satisfacción de la democracia 
 
-creencias : ¿Cuál de las frases está mas cerca de su manera de pensar 
+*creencias* : ¿Cuál de las frases está mas cerca de su manera de pensar 
 
-Variables de control 
+**Variables de control**
 
-etnia: ¿Con qué raza o etnicidad se identifica mejor?
+*etnia*: ¿Con qué raza o etnicidad se identifica mejor?
 
-estrato: ¿A qué clase social considera que pertenece? 
+*estrato*: ¿A qué clase social considera que pertenece? 
 
-partido_pol: Familia Partido Político 
+*partido_pol*: Familia Partido Político 
 
-Variable dependiente 
+**Variable dependiente** 
