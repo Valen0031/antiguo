@@ -1,0 +1,240 @@
+---
+title: "Entrega 2"
+author: "Micaela"
+date: "2024-05-09"
+output: html_document
+---
+
+```{r}
+setwd("~/2024-1/Trabajo estadística/Proyecto trabajo estadística")
+```
+## 1. Abrimos nuestra base de datos
+```{r}
+library(rio)
+data=import("Latinobarometro_2023.sav")
+```
+## 2. Exploramos nuestra base de datos
+```{r}
+names(data)
+```
+
+## 3. Filtramos para tomar en cuenta solo la data de Perú
+Observamos que nuestra base de datos reúne información de todos los países de latinoamérica. Por ello, para tomar de análisis solo a Perú, filtraremos las respuestas de solo Perú y usaremos data_peru como nueva base de datos
+```{r}
+data$IDENPA=as.factor(data$IDENPA)
+data$IDENPA=factor(data$IDENPA,
+                levels = levels(data$IDENPA),
+                labels = c("Brasil", "Colombia", "Costa Rica" , "Chile" , "Ecuador", "El Salvador", "Guatemala", "Honduras", "México", "Nicaragua", "Panamá", "Paraguay", "Perú", "Uruguay", "Venezuela", "España", "República Dominicana"),
+                ordered = F)
+```
+
+```{r}
+str(data$IDENPA)
+```
+
+```{r}
+library(dplyr)
+data_peru <- data %>%
+filter(IDENPA=="Perú")
+
+```
+
+
+## 4. Exploramos y ordenamos nuestras variables
+Cambiaremos el nombre de las variables y les daremos formato.
+## Variables independientes:
+
+### a. Satisfacción con la democracia
+
+```{r}
+names(data_peru)=gsub(pattern = "P11STGBS.A",
+                           replacement = "satis_dem",
+                           x = names(data_peru))
+```
+
+```{r}
+data_peru$satis_dem=as.factor(data_peru$satis_dem)
+data_peru$satis_dem=factor(data_peru$satis_dem,
+                levels = levels(data_peru$satis_dem),
+                labels = c("Very satisfied", "Quite satisfied", "Not very satisfied", "Not at all satisfied"),
+                ordered = F)
+```
+
+```{r}
+table(data_peru$satis_dem)
+```
+
+### b. Creencias ¿Cuál de las frases está más cerca de su manera de pensar?
+
+```{r}
+names(data_peru)=gsub(pattern = "P10STGB",
+                           replacement = "creencias",
+                           x = names(data_peru))
+```
+
+```{r}
+data_peru$creencias=as.factor(data_peru$creencias)
+data_peru$creencias=factor(data_peru$creencias,
+                levels = levels(data_peru$creencias),
+                labels = c("Democracy is preferable to any other kind of government", "Under some circumstances, an authoritarian government can be preferable to a democratic one", "For people like me, it doesn’t matter whether we have a democratic or non-democratic regime"),
+                ordered = F)
+```
+
+```{r}
+table(data_peru$creencias)
+```
+
+## Variables de control:
+
+### a. Etnia 
+
+```{r}
+names(data_peru)=gsub(pattern = "S7",
+                           replacement = "etnia",
+                           x = names(data_peru))
+```
+
+```{r}
+data_peru$etnia=as.factor(data_peru$etnia)
+data_peru$etnia=factor(data_peru$etnia,
+                levels = levels(data_peru$etnia),
+                labels = c("Asian","Black","Indigenous","Mestizo","Mulatto","White","Other race"),
+                ordered = F)
+```
+
+```{r}
+table(data_peru$etnia)
+```
+
+### b. Clase social
+
+```{r}
+names(data_peru)=gsub(pattern = "S2",
+                           replacement = "estrato",
+                           x = names(data_peru))
+```
+
+```{r}
+data_peru$estrato=as.factor(data_peru$estrato)
+data_peru$estrato=factor(data_peru$estrato,
+                levels = levels(data_peru$estrato),
+                labels = c("Upper class","Upper-Middle class","Midle class","Lower-Middle class","Lower class"),
+                ordered = F)
+```
+
+```{r}
+table(data_peru$estrato)
+```
+
+### c. Partido político
+
+```{r}
+names(data_peru)=gsub(pattern = "FAMPART",
+                           replacement = "partido_pol",
+                           x = names(data_peru))
+```
+
+```{r}
+data_peru$partido_pol=as.factor(data_peru$partido_pol)
+data_peru$partido_pol=factor(data_peru$partido_pol,
+                levels = levels(data_peru$partido_pol),
+                labels = c( "Vote null / white, Do not vote / none", "Social Democratic Parties", "Christian Democrat Parties", "Nationalist Parties"),
+                ordered = F)
+```
+
+```{r}
+table(data_peru$partido_pol)
+```
+
+
+## Variable dependiente
+(MOSTRAR TARJETA 2) Por favor, mire esta tarjeta y dígame, para cada uno de los grupos, instituciones o personas de la lista ¿cuánta confianza tiene usted en ellas: mucha (1), algo (2), poca (3) o ninguna confianza(4) en...?
+
+Solo hemos elegido usar 3 instituciones: Gobierno, Congreso, Presidente, Partidos Políticos
+```{r}
+str(data_peru$P13STGBS.A)
+```
+
+```{r}
+names(data_peru)=gsub(pattern = "P13ST.D",
+                           replacement = "Congreso",
+                           x = names(data_peru))
+```
+
+```{r}
+str(data_peru$Congreso)
+```
+
+```{r}
+data_peru$Congreso=as.factor(data_peru$Congreso)
+data_peru$Congreso=factor(data_peru$Congreso,
+                levels = levels(data_peru$Congreso),
+                labels = c( "A lot", "Some", "Little", "No trust"),
+                ordered = F)
+```
+
+```{r}
+table(data_peru$Congreso)
+```
+
+
+```{r}
+names(data_peru)=gsub(pattern = "P13ST.E",
+                           replacement = "Gobierno",
+                           x = names(data_peru))
+```
+
+```{r}
+data_peru$Gobierno=as.factor(data_peru$Gobierno)
+data_peru$Gobierno=factor(data_peru$Gobierno,
+                levels = levels(data_peru$Gobierno),
+                labels = c( "A lot", "Some", "Little", "No trust"),
+                ordered = F)
+```
+
+```{r}
+table(data_peru$Gobierno)
+```
+```{r}
+names(data_peru)=gsub(pattern = "P13ST.G",
+                           replacement = "Partidos_Politicos",
+                           x = names(data_peru))
+```
+
+```{r}
+data_peru$Partidos_Politicos=as.factor(data_peru$Partidos_Politicos)
+data_peru$Partidos_Politicos=factor(data_peru$Partidos_Politicos,
+                levels = levels(data_peru$Partidos_Politicos),
+                labels = c( "A lot", "Some", "Little", "No trust"),
+                ordered = F)
+```
+
+```{r}
+table(data_peru$Partidos_Politicos)
+```
+```{r}
+names(data_peru)=gsub(pattern = "P13ST.I",
+                           replacement = "Presidente",
+                           x = names(data_peru))
+```
+
+```{r}
+data_peru$Presidente=as.factor(data_peru$Presidente)
+data_peru$Presidente=factor(data_peru$Presidente,
+                levels = levels(data_peru$Presidente),
+                labels = c( "A lot", "Some", "Little", "No trust"),
+                ordered = F)
+```
+
+```{r}
+table(data_peru$Presidente)
+```
+## 5. Exportamos nuestra base de datos
+```{r}
+library(writexl)
+
+data_exportar2 <- data_peru, [c("satis_dem", "creencias", "etnia", "estrato", "partido_pol", "Congreso", "Gobierno", "Partidos_Politicos", "Presidente")]
+
+write_xlsx(data_exportar2, "data_exportados_peru2.xlsx")
+
+```
