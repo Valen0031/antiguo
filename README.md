@@ -1,7 +1,7 @@
 # Trabajo-Grupal
 **Variables independientes**
 
-*satis_dem* : ¿Qué tan satisfecho se encuentra con la democracia en su país?
+***satis_dem* : ¿Qué tan satisfecho se encuentra con la democracia en su país?**
 
 Very satisfied 
 
@@ -11,7 +11,7 @@ Not very satisfied
 
 Not at all satisfied 
 
-*creencias* : ¿Cuál de las frases está mas cerca de su manera de pensar? 
+***creencias* : ¿Cuál de las frases está mas cerca de su manera de pensar?**
 
 Democracy is preferable to any other kind of government 
 
@@ -21,7 +21,7 @@ For people like me, it doesn’t matter whether we have a democratic or non-demo
 
 **Variables de control**
 
-*etnia*: ¿Con qué raza o etnicidad se identifica mejor?
+***etnia*: ¿Con qué raza o etnicidad se identifica mejor?**
 
 Asian 
 
@@ -37,7 +37,7 @@ White
 
 Other race 
 
-*estrato*: ¿A qué clase social considera que pertenece? 
+***estrato*: ¿A qué clase social considera que pertenece?**
 
 Upper class 
 
@@ -51,7 +51,7 @@ Lower class
 
 Don´t know
 
-*partido_pol*: Familia Partido Político 
+***partido_pol*: Familia Partido Político** 
 
 (Vote null / white, Do not vote / none) 
 
@@ -79,7 +79,7 @@ Electoral alliances (diverse origins)
 
 **Variable dependiente** 
 
-Confianza en las instituciones: ¿Qué tanto confias en las siguientes instituciones?
+**Confianza en las instituciones: ¿Qué tanto confias en las siguientes instituciones?**
 
 *Congreso*
 
