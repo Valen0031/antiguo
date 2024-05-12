@@ -1,4 +1,4 @@
-# trabajo-grupal
+# Trabajo-Grupal
 **Variables independientes**
 
 *satis_dem* : Satisfacción de la democracia 
