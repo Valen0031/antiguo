@@ -78,7 +78,8 @@ Political parties with specific themes
 Electoral alliances (diverse origins) 
 
 **Variable dependiente** 
-¿Qué tanto confias en las siguientes instituciones?
+
+Confianza en las instituciones: ¿Qué tanto confias en las siguientes instituciones?
 
 *Congreso*
 
