@@ -1,6 +1,7 @@
 # Trabajo-Grupal
 
 Diccionario de datos 
+
 Base de datos: Latinobarómetro 2023
 
 **Variables independientes**
