@@ -53,8 +53,6 @@ Lower-Middle class: 4
 
 Lower class: 5
 
-Don´t know: 6 
-
 ***partido_pol* = Familia Partido Político** 
 
 1. (Vote null / white, Do not vote / none) 
