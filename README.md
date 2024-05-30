@@ -1,85 +1,77 @@
 # Trabajo-Grupal
+
+Diccionario de datos 
+Base de datos: Latinobarómetro 2023
+
 **Variables independientes**
 
-***satis_dem* : ¿Qué tan satisfecho se encuentra con la democracia en su país?**
+***satis_dem* = ¿Qué tan satisfecho se encuentra con la democracia en su país?**
 
-Very satisfied 
+Very satisfied: 1
 
-Quite satisfied 
+Quite satisfied: 2
 
-Not very satisfied 
+Not very satisfied: 3
 
-Not at all satisfied 
+Not at all satisfied: 4
 
-***creencias* : ¿Cuál de las frases está mas cerca de su manera de pensar?**
+***creencias* = ¿Cuál de las frases está mas cerca de su manera de pensar?**
 
-Democracy is preferable to any other kind of government 
+1. Democracy is preferable to any other kind of government 
 
-Under some circumstances, an authoritarian government can be preferable to a democratic one 
+2. Under some circumstances, an authoritarian government can be preferable to a democratic one 
 
-For people like me, it doesn’t matter whether we have a democratic or non-democratic regime 
+3. For people like me, it doesn’t matter whether we have a democratic or non-democratic regime 
 
 **Variables de control**
 
-***etnia*: ¿Con qué raza o etnicidad se identifica mejor?**
+***etnia* = ¿Con qué raza o etnicidad se identifica mejor?**
 
-Asian 
+1. Asian 
 
-Black 
+2. Black 
 
-Indigenous 
+3. Indigenous 
 
-Mestizo 
+4. Mestizo 
 
-Mulatto 
+5. Mulatto 
 
-White 
+6. White 
 
-Other race 
+7. Other race 
 
-***estrato*: ¿A qué clase social considera que pertenece?**
+***estrato* = ¿A qué clase social considera que pertenece?**
 
-Upper class 
+Upper class: 1 
 
-Upper-Middle class 
+Upper-Middle class: 2
 
-Middle class 
+Middle class: 3
 
-Lower-Middle class 
+Lower-Middle class: 4
 
-Lower class 
+Lower class: 5
 
-Don´t know
+Don´t know: 6 
 
-***partido_pol*: Familia Partido Político** 
+***partido_pol* = Familia Partido Político** 
 
-(Vote null / white, Do not vote / none) 
+1. (Vote null / white, Do not vote / none) 
 
-Green parties 
 
-Communist parties 
+2. Social Democratic Parties 
 
-Social Democratic Parties 
 
-Liberal Parties 
+3. Christian Democrat Parties 
 
-Christian Democrat Parties 
 
-Conservative Parties 
+4. Nationalist Parties 
 
-Nationalist Parties 
-
-Agrarian Parties 
-
-Ethnic and Regional Parties 
-
-Political parties with specific themes 
-
-Electoral alliances (diverse origins) 
 
 **Variable dependiente** 
 
-**Confianza en las instituciones: ¿Qué tanto confias en las siguientes instituciones?**
+**Confianza en las instituciones = ¿Qué tanto confias en las siguientes instituciones?**
 
 *Congreso*
 
