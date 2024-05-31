@@ -3,7 +3,8 @@
 Diccionario de datos 
 
 Base de datos: Latinobarómetro 2023
-Unidad de análisis: País-Perú
+
+Unidad de análisis: Peruanos encuestados
 
 **Variables independientes**
 
