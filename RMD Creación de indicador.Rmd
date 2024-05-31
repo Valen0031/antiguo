@@ -1,0 +1,66 @@
+---
+title: "Entrega 2 vol. 2"
+author: "Micaela Loza 20211300"
+date: "2024-05-31"
+output: html_document
+---
+```{r}
+setwd("C:/Users/USUARIO/Documents/2024-1/Trabajo estadística")
+```
+
+```{r}
+library(rio)
+data=import("data_exportados_peru2.xlsx")
+```
+
+```{r}
+str(data)
+```
+```{r}
+library(dplyr)
+
+data <- data %>%
+  dplyr :: mutate(
+    congreso_num = recode(Congreso, 
+                          "No trust" = 1, 
+                          "Little" = 2, 
+                          "Some" = 3, 
+                          "A lot" = 4, 
+                          .default = NA_real_),
+    gobierno_num = recode(Gobierno, 
+                          "No trust" = 1, 
+                          "Little" = 2, 
+                          "Some" = 3, 
+                          "A lot" = 4, 
+                          .default = NA_real_),
+    partidos_politicos_num = recode(Partidos_Politicos, 
+                                    "No trust" = 1, 
+                                    "Little" = 2, 
+                                    "Some" = 3,
+                                    "A lot" = 4, 
+                                    .default = NA_real_),
+    presidente_num = recode(Presidente, 
+                            "No trust" = 1, 
+                            "Little" = 2, 
+                            "Some" = 3, 
+                            "A lot" = 4,  
+                            .default = NA_real_)
+  )
+
+data <- data %>%
+  rowwise() %>%
+  mutate(conf_instit = sum(c(congreso_num, gobierno_num, partidos_politicos_num, presidente_num), na.rm = TRUE)) %>%
+  ungroup()
+
+head(data)
+
+```
+
+```{r}
+library(writexl)
+
+data_exportar3 <- data[, c("satis_dem", "creencias", "etnia", "estrato", "partido_pol", "conf_instit")]
+
+write_xlsx(data_exportar3, "data_exportados_peru3.xlsx")
+```
+
