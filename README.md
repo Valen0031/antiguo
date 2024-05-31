@@ -80,13 +80,13 @@ Lower class: 5
 
 *Gobierno*
 
- A lot 
+No trust = 1 
  
- Some  
+Little = 2 
  
- Little  
+Some = 3  
  
- No trust 
+A lot = 4
 
 
 
