@@ -3,6 +3,7 @@
 Diccionario de datos 
 
 Base de datos: Latinobarómetro 2023
+Unidad de análisis: País-Perú
 
 **Variables independientes**
 
@@ -72,13 +73,7 @@ Lower class: 5
 
 **Confianza en las instituciones = ¿Qué tanto confias en las siguientes instituciones?**
 
-*Congreso*
-
-*Partidos_Politicos*
-
-*Presidente*
-
-*Gobierno*
+*Congreso* + *Partidos_Politicos* + *Presidente* + *Gobierno*
 
 No trust = 1 
  
